@@ -1,0 +1,51 @@
+@import "@inkress/apps-core/styles.css";
+
+/* Currency Dashboard — balances, per-currency stats, stacked trend. */
+
+.cd-ranges { display: inline-flex; gap: 3px; background: var(--panel); padding: 3px; border-radius: 9px; border: 1px solid var(--line); }
+.cd-range { height: 30px; padding: 0 12px; font-size: 0.8125rem; font-weight: 600; border: 0; background: transparent; color: var(--ink-soft); border-radius: 7px; }
+.cd-range:hover { color: var(--ink); background: transparent; }
+.cd-range.is-on { background: var(--surface); color: var(--accent); box-shadow: var(--e1); }
+
+.cd-balances { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.cd-balance.is-payout { border-left: 3px solid var(--accent); }
+
+/* currency mix bar */
+.cd-mixwrap { margin: 12px 0; }
+.cd-mix { display: flex; height: 12px; border-radius: 99px; overflow: hidden; background: var(--panel); }
+.cd-mix-seg { height: 100%; }
+.cd-legend { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 8px; font-size: 0.78rem; color: var(--ink-soft); }
+.cd-leg { display: inline-flex; align-items: center; gap: 5px; }
+.cd-leg i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+/* native↔converted toggle */
+.cd-toggle { display: inline-flex; gap: 3px; background: var(--panel); padding: 3px; border-radius: 9px; border: 1px solid var(--line); margin: 6px 0 12px; }
+.cd-tg { height: 28px; padding: 0 12px; font-size: 0.8125rem; font-weight: 600; border: 0; background: transparent; color: var(--ink-soft); border-radius: 7px; }
+.cd-tg.is-on { background: var(--surface); color: var(--accent); box-shadow: var(--e1); }
+.cd-native { display: block; font-size: 0.72rem; color: var(--ink-faint); font-weight: 500; }
+
+/* rates / override */
+.cd-rates td { padding: 9px 4px; }
+.cd-rateedit { display: flex; gap: 6px; align-items: center; }
+.cd-rateedit input { width: 110px; height: 30px; }
+.cd-ov { color: var(--accent); font-weight: 600; }
+.cd-balance { padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); min-width: 0; }
+.cd-cur { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; color: var(--ink-faint); text-transform: uppercase; }
+.cd-amt { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em; margin: 3px 0 2px; font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.cd-chart { margin: 16px 0 6px; }
+.cd-bars { display: flex; align-items: flex-end; gap: 6px; height: 130px; padding: 6px 2px 0; }
+.cd-bar { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; min-width: 0; }
+.cd-bar-stack { width: 100%; max-width: 30px; height: 100%; display: flex; flex-direction: column-reverse; justify-content: flex-start; border-radius: 5px 5px 2px 2px; overflow: hidden; }
+.cd-seg { width: 100%; transition: height 0.3s var(--ease); }
+.cd-bar-label { font-size: 0.625rem; color: var(--ink-faint); margin-top: 5px; white-space: nowrap; }
+.cd-legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
+.cd-leg { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--ink-soft); }
+.cd-leg i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+
+.cd-tag { font-size: 0.625rem; font-weight: 700; color: var(--ink-faint); margin-left: 6px; }
+
+.cd-filters { display: inline-flex; gap: 3px; background: var(--panel); padding: 3px; border-radius: 9px; border: 1px solid var(--line); }
+.cd-filter { height: 30px; padding: 0 13px; font-size: 0.8125rem; font-weight: 600; border: 0; background: transparent; color: var(--ink-soft); border-radius: 7px; }
+.cd-filter:hover { color: var(--ink); background: transparent; }
+.cd-filter.is-on { background: var(--surface); color: var(--accent); box-shadow: var(--e1); }
